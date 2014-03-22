@@ -7,6 +7,7 @@ import com.gravirift.riftes.magica.Wand;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Vec3;
@@ -17,6 +18,16 @@ public class ItemFireStaff_2 extends Wand{
 	@Override
 	public int getCooldown() {
 		return 30;
+	}
+	
+	@Override
+	public int getTier(){
+		return 2;
+	}
+	
+	@Override
+	public ItemStack getConsumptionCost() {
+		return new ItemStack(Items.apple, 1);
 	}
 	
 	@Override

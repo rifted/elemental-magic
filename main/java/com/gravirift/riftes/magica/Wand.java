@@ -58,9 +58,7 @@ public class Wand extends Item{
 			if(i != null){
 				if(i.getItem() == testStack.getItem()){
 					if(i.stackSize >= testStack.stackSize){
-						int size = i.stackSize;
-						p.inventory.mainInventory[slot] = null;
-						p.inventory.mainInventory[slot] = new ItemStack(testStack.getItem(), size-testStack.stackSize);
+						i.stackSize -= testStack.stackSize;
 						return true;
 					}
 				}
@@ -72,6 +70,10 @@ public class Wand extends Item{
 	
 	public int getCooldown(){
 		return 60;
+	}
+	
+	public int getTier(){
+		return 1;
 	}
 
 	public void castSpell(EntityPlayer player) {

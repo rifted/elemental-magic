@@ -21,6 +21,11 @@ public class ItemFireStaff extends Wand{
 	}
 	
 	@Override
+	public int getTier(){
+		return 1;
+	}
+	
+	@Override
 	public ItemStack getConsumptionCost() {
 		return new ItemStack(Items.apple, 1);
 	}
