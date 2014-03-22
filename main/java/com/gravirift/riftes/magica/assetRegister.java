@@ -1,14 +1,18 @@
 package com.gravirift.riftes.magica;
 
 import net.minecraft.block.Block;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.gravirift.riftes.magica.blocks.ores.BlockFireEssenceOre;
 import com.gravirift.riftes.magica.blocks.ores.BlockRuneOre;
+import com.gravirift.riftes.magica.blocks.ores.CastingEssenceOre;
+import com.gravirift.riftes.magica.items.CastingEssence;
 import com.gravirift.riftes.magica.items.FireEssence;
 import com.gravirift.riftes.magica.items.FireRune;
 import com.gravirift.riftes.magica.items.Rune;
+import com.gravirift.riftes.magica.items.staves.PlainStaff;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_2;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_3;
@@ -16,12 +20,16 @@ import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_3;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class assetRegister {
-	public static Item fireStaff, fireStaff_2, fireStaff_3;
-	public static Item rune, fireEssence, fireRune;
-	public static Block runeOre, fireEssenceOre;
+	public static Item staff, fireStaff, fireStaff_2, fireStaff_3;
+	public static Item rune, fireEssence, fireRune, castingEssence, castingRune;
+	public static Block runeOre, fireEssenceOre, castingEssenceOre;
 	public static EventManager eventmanager = new EventManager();
 	
 	public static void registerStaffs(){
+		
+		staff = new PlainStaff().setUnlocalizedName("staff").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
+		GameRegistry.registerItem(staff, "staff");
+		
 		fireStaff = new ItemFireStaff().setUnlocalizedName("fire_staff").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
     	GameRegistry.registerItem(fireStaff, "fire_staff");
     	
@@ -41,6 +49,10 @@ public class assetRegister {
     	fireEssenceOre.setHarvestLevel("pickaxe", 2);
     	GameRegistry.registerBlock(fireEssenceOre, "fire_essence_ore");
     	
+    	castingEssenceOre = new CastingEssenceOre().setBlockName("casting_essence_ore").setCreativeTab(MagicaMain.magicaTab);
+    	castingEssenceOre.setHarvestLevel("pickaxe", 2);
+    	GameRegistry.registerBlock(castingEssenceOre, "casting_essence_ore");
+    	
     	GameRegistry.registerWorldGenerator(eventmanager, 0);
 	}
 	
@@ -53,9 +65,27 @@ public class assetRegister {
     	
     	fireRune = new FireRune().setUnlocalizedName("fire_rune").setMaxStackSize(64).setCreativeTab(MagicaMain.magicaTab);
     	GameRegistry.registerItem(fireRune, "fire_rune");
+    	
+    	castingEssence = new CastingEssence().setUnlocalizedName("casting_essence").setMaxStackSize(64).setCreativeTab(MagicaMain.magicaTab);
+    	GameRegistry.registerItem(castingEssence, "casting_essence");
 	}
 	
 	public static void registerRecipes(){
 		GameRegistry.addShapelessRecipe(new ItemStack(fireRune, 2), new ItemStack(fireEssence, 1), new ItemStack(rune, 1));
+		GameRegistry.addRecipe(new ItemStack(staff),
+				" a ", " b ", " b ",
+		        'a', new ItemStack(castingEssence), 'b', new ItemStack(Items.stick));
+		
+		GameRegistry.addRecipe(new ItemStack(fireStaff),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(fireEssence), 'b', new ItemStack(staff));
+		
+		GameRegistry.addRecipe(new ItemStack(fireStaff_2),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(fireEssence), 'b', new ItemStack(fireStaff));
+		
+		GameRegistry.addRecipe(new ItemStack(fireStaff_3),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(fireEssence), 'b', new ItemStack(fireStaff_2));
 	}
 }
