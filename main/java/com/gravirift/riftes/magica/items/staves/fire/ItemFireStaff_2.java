@@ -3,6 +3,7 @@ package com.gravirift.riftes.magica.items.staves.fire;
 import java.util.List;
 
 import com.gravirift.riftes.magica.Wand;
+import com.gravirift.riftes.magica.assetRegister;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +28,7 @@ public class ItemFireStaff_2 extends Wand{
 	
 	@Override
 	public ItemStack getConsumptionCost() {
-		return new ItemStack(Items.apple, 1);
+		return new ItemStack(assetRegister.fireRune, 1);
 	}
 	
 	@Override

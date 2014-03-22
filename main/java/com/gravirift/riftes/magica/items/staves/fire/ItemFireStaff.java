@@ -11,6 +11,7 @@ import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
 import com.gravirift.riftes.magica.Wand;
+import com.gravirift.riftes.magica.assetRegister;
 
 public class ItemFireStaff extends Wand{
 	
@@ -26,7 +27,7 @@ public class ItemFireStaff extends Wand{
 	
 	@Override
 	public ItemStack getConsumptionCost() {
-		return new ItemStack(Items.apple, 1);
+		return new ItemStack(assetRegister.fireRune, 1);
 	}
 	
 	@Override

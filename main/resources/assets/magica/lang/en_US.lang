@@ -4,5 +4,9 @@ item.fire_staff_2.name=Fire Staff
 item.fire_staff_3.name=Fire Staff
 
 tile.rune_ore.name=Rune Ore
+tile.fire_essence_ore.name=Rune Ore
 
 item.rune.name=Rune
+
+item.fire_essence.name=Fire Essence
+item.fire_rune.name=Fire Rune

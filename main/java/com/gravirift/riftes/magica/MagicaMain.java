@@ -31,6 +31,7 @@ public class MagicaMain
     	assetRegister.registerStaffs();
     	assetRegister.registerBlocksTerrain();
     	assetRegister.registerOtherItems();
+    	assetRegister.registerRecipes();
     }
     
     @EventHandler

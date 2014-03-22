@@ -28,6 +28,7 @@ public class EventManager implements IWorldGenerator{
 
 	private void generateOverworld(World world, Random random, int x, int z) {
 		addOreSpawn(assetRegister.runeOre, world, random, x, z, 16, 16, 12 + random.nextInt(3), 50, 15, 50);
+		addOreSpawn(assetRegister.fireEssenceOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 5, 30);
 	}
 
 	private void generateNether(World world, Random random, int x, int z) {
