@@ -24,8 +24,8 @@ public class Overlay {
 			
 			int count = 0;
 			fontRender.drawStringWithShadow(MagicaMain.overlayText1, 16, 16, 0xffffffff);
-			fontRender.drawStringWithShadow(MagicaMain.overlayText2, 16, 20+fontRender.FONT_HEIGHT, 0xffffffff);
-			fontRender.drawStringWithShadow(MagicaMain.overlayText3, 16, 24+(fontRender.FONT_HEIGHT*2), 0xffffffff);
+			fontRender.drawStringWithShadow(MagicaMain.overlayText2, 16, 17+fontRender.FONT_HEIGHT, 0xffffffff);
+			fontRender.drawStringWithShadow(MagicaMain.overlayText3, 16, 18+(fontRender.FONT_HEIGHT*2), 0xffffffff);
 			count++;
 			
 	  }

@@ -2,6 +2,7 @@ package com.gravirift.riftes.magica;
 
 import javax.sound.midi.Soundbank;
 
+import net.minecraft.block.material.Material;
 import net.minecraft.client.audio.SoundCategory;
 import net.minecraft.client.audio.SoundRegistry;
 import net.minecraft.entity.Entity;
@@ -58,7 +59,11 @@ public class Wand extends Item{
 			if(i != null){
 				if(i.getItem() == testStack.getItem()){
 					if(i.stackSize >= testStack.stackSize){
-						i.stackSize -= testStack.stackSize;
+						if(i.stackSize == 1){
+							p.inventory.setInventorySlotContents(slot, null);
+						}else{
+							i.stackSize -= testStack.stackSize;
+						}
 						return true;
 					}
 				}
