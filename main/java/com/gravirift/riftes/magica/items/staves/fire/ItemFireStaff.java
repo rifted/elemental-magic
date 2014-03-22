@@ -2,16 +2,15 @@ package com.gravirift.riftes.magica.items.staves.fire;
 
 import java.util.List;
 
-import com.gravirift.riftes.magica.Wand;
-
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityLargeFireball;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
+
+import com.gravirift.riftes.magica.Wand;
 
 public class ItemFireStaff extends Wand{
 	

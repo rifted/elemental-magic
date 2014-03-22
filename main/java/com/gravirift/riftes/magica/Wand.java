@@ -1,10 +1,5 @@
 package com.gravirift.riftes.magica;
 
-import javax.sound.midi.Soundbank;
-
-import net.minecraft.block.material.Material;
-import net.minecraft.client.audio.SoundCategory;
-import net.minecraft.client.audio.SoundRegistry;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;

@@ -4,10 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 import com.gravirift.riftes.magica.blocks.ores.BlockRuneOre;
-import com.gravirift.riftes.magica.items.*;
-import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff;
-import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_2;
-import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_3;
+import com.gravirift.riftes.magica.items.Rune;
+import com.gravirift.riftes.magica.items.staves.fire.*;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

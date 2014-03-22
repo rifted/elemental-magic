@@ -3,7 +3,6 @@ package com.gravirift.riftes.magica.blocks.ores;
 import java.util.ArrayList;
 
 import com.gravirift.riftes.magica.assetRegister;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
