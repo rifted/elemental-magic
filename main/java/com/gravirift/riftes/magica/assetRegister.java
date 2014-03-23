@@ -9,8 +9,6 @@ import com.gravirift.riftes.magica.blocks.ores.BlockFireEssenceOre;
 import com.gravirift.riftes.magica.blocks.ores.BlockRuneOre;
 import com.gravirift.riftes.magica.blocks.ores.BlockWaterEssenceOre;
 import com.gravirift.riftes.magica.blocks.ores.CastingEssenceOre;
-import com.gravirift.riftes.magica.entities.RenderWaterOrb;
-import com.gravirift.riftes.magica.entities.WaterOrb;
 import com.gravirift.riftes.magica.entities.WaterOrbItem;
 import com.gravirift.riftes.magica.items.CastingEssence;
 import com.gravirift.riftes.magica.items.FireEssence;
@@ -22,14 +20,17 @@ import com.gravirift.riftes.magica.items.staves.PlainStaff;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_2;
 import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_3;
+import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_4;
+import com.gravirift.riftes.magica.items.staves.fire.ItemFireStaff_5;
 import com.gravirift.riftes.magica.items.staves.water.ItemWaterStaff;
+import com.gravirift.riftes.magica.items.staves.water.ItemWaterStaff_2;
+import com.gravirift.riftes.magica.items.staves.water.ItemWaterStaff_3;
 
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class assetRegister {
-	public static Item staff, fireStaff, fireStaff_2, fireStaff_3;
-	public static Item waterStaff;
+	public static Item staff, fireStaff, fireStaff_2, fireStaff_3, fireStaff_4, fireStaff_5;
+	public static Item waterStaff, waterStaff_2, waterStaff_3;
 	public static Item rune, fireEssence, fireRune, castingEssence, castingRune, waterEssence, waterRune;
 	public static Item waterOrb;
 	public static Block runeOre, fireEssenceOre, castingEssenceOre, waterEssenceOre;
@@ -49,8 +50,22 @@ public class assetRegister {
     	fireStaff_3 = new ItemFireStaff_3().setUnlocalizedName("fire_staff_3").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
     	GameRegistry.registerItem(fireStaff_3, "fire_staff_3");
     	
+    	fireStaff_4 = new ItemFireStaff_4().setUnlocalizedName("fire_staff_4").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
+    	GameRegistry.registerItem(fireStaff_4, "fire_staff_4");
+    	
+    	fireStaff_5 = new ItemFireStaff_5().setUnlocalizedName("fire_staff_5").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
+    	GameRegistry.registerItem(fireStaff_5, "fire_staff_5");
+    	
     	waterStaff = new ItemWaterStaff().setUnlocalizedName("water_staff").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
     	GameRegistry.registerItem(waterStaff, "water_staff");
+    	
+    	waterStaff_2 = new ItemWaterStaff_2().setUnlocalizedName("water_staff_2").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
+    	GameRegistry.registerItem(waterStaff_2, "water_staff_2");
+    	
+    	waterStaff_3 = new ItemWaterStaff_3().setUnlocalizedName("water_staff_3").setMaxStackSize(1).setCreativeTab(MagicaMain.magicaTab);
+    	GameRegistry.registerItem(waterStaff_3, "water_staff_3");
+    	
+    	
 	}
 	
 	public static void registerBlocksTerrain(){
@@ -113,9 +128,24 @@ public class assetRegister {
 		GameRegistry.addRecipe(new ItemStack(fireStaff_3),
 				"aaa", "aba", "aaa",
 		        'a', new ItemStack(fireEssence), 'b', new ItemStack(fireStaff_2));
+		GameRegistry.addRecipe(new ItemStack(fireStaff_4),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(fireEssence), 'b', new ItemStack(fireStaff_3));
+		GameRegistry.addRecipe(new ItemStack(fireStaff_5),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(fireEssence), 'b', new ItemStack(fireStaff_4));
+		
+		GameRegistry.addRecipe(new ItemStack(waterStaff),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(waterEssence), 'b', new ItemStack(staff));
+		GameRegistry.addRecipe(new ItemStack(waterStaff_2),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(waterEssence), 'b', new ItemStack(waterStaff));
+		GameRegistry.addRecipe(new ItemStack(waterStaff_3),
+				"aaa", "aba", "aaa",
+		        'a', new ItemStack(waterEssence), 'b', new ItemStack(waterStaff_2));
 	}
 	
 	public static void registerRenders(){
-		RenderingRegistry.registerEntityRenderingHandler(WaterOrb.class, new RenderWaterOrb(waterOrb));
 	}
 }

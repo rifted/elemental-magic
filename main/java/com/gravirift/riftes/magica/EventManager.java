@@ -22,7 +22,6 @@ public class EventManager implements IWorldGenerator{
 				break;
 		}
 	}
-
 	private void generateEnd(World world, Random random, int x, int z) {
 		
 	}

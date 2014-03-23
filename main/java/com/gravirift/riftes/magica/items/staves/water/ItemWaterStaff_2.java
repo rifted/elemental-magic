@@ -14,16 +14,16 @@ import com.gravirift.riftes.magica.Wand;
 import com.gravirift.riftes.magica.assetRegister;
 import com.gravirift.riftes.magica.entities.WaterOrb;
 
-public class ItemWaterStaff extends Wand{
+public class ItemWaterStaff_2 extends Wand{
 	
 	@Override
 	public int getCooldown() {
-		return 200;
+		return 150;
 	}
 	
 	@Override
 	public int getTier(){
-		return 1;
+		return 2;
 	}
 	
 	@Override
@@ -33,7 +33,7 @@ public class ItemWaterStaff extends Wand{
 	
 	@Override
 	public void registerIcons(IIconRegister iconRegister){
-		this.itemIcon = iconRegister.registerIcon("magica:water_staff");
+		this.itemIcon = iconRegister.registerIcon("magica:water_staff_2");
 	}
 	@Override
 	public void castSpell(EntityPlayer player) {
@@ -49,7 +49,7 @@ public class ItemWaterStaff extends Wand{
 	
 	@Override
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add("Tier 1");
-		par3List.add("10 second cooldown");
+		par3List.add("Tier 2");
+		par3List.add("7.5 second cooldown");
 	}
 }

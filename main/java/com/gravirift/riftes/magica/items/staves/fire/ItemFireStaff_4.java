@@ -15,16 +15,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-public class ItemFireStaff_3 extends Wand{
+public class ItemFireStaff_4 extends Wand{
 	
 	@Override
 	public int getCooldown() {
-		return 21;
+		return 11;
 	}
 	
 	@Override
 	public int getTier(){
-		return 3;
+		return 4;
 	}
 	
 	@Override
@@ -34,7 +34,7 @@ public class ItemFireStaff_3 extends Wand{
 	
 	@Override
 	public void registerIcons(IIconRegister iconRegister){
-		this.itemIcon = iconRegister.registerIcon("magica:fire_staff_3");
+		this.itemIcon = iconRegister.registerIcon("magica:fire_staff_4");
 	}
 	
 	@Override
@@ -54,16 +54,16 @@ public class ItemFireStaff_3 extends Wand{
 			player.posX + look.xCoord * 2,
 			player.posY + look.yCoord * 2,
 			player.posZ + look.zCoord * 2);
-			fireball.accelerationX = look.xCoord * 0.2;
-			fireball.accelerationY = look.yCoord * 0.2;
-			fireball.accelerationZ = look.zCoord * 0.2;
+			fireball.accelerationX = look.xCoord * 0.25;
+			fireball.accelerationY = look.yCoord * 0.25;
+			fireball.accelerationZ = look.zCoord * 0.25;
 			world.spawnEntityInWorld(fireball);
 		}
 	}
 	
 	@Override
 	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-		par3List.add("Tier 3");
-		par3List.add("1 second cooldown");
+		par3List.add("Tier 4");
+		par3List.add("0.5 second cooldown");
 	}
 }
