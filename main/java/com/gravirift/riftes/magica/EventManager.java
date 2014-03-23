@@ -1,6 +1,7 @@
 package com.gravirift.riftes.magica;
 
 import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -29,6 +30,7 @@ public class EventManager implements IWorldGenerator{
 	private void generateOverworld(World world, Random random, int x, int z) {
 		addOreSpawn(assetRegister.runeOre, world, random, x, z, 16, 16, 12 + random.nextInt(3), 50, 15, 50);
 		addOreSpawn(assetRegister.fireEssenceOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 5, 30);
+		addOreSpawn(assetRegister.waterEssenceOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 50, 5, 30);
 		addOreSpawn(assetRegister.castingEssenceOre, world, random, x, z, 16, 16, 2 + random.nextInt(3), 20, 5, 30);
 	}
 

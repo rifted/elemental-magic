@@ -3,10 +3,16 @@ item.fire_staff.name=Fire Staff
 item.fire_staff_2.name=Fire Staff
 item.fire_staff_3.name=Fire Staff
 
+item.water_staff.name=Water Staff
+
 tile.rune_ore.name=Rune Ore
-tile.fire_essence_ore.name=Rune Ore
+tile.fire_essence_ore.name=Fire Essence Ore
+tile.water_essence_ore.name=Water Essence Ore
 
 item.rune.name=Rune
 
 item.fire_essence.name=Fire Essence
 item.fire_rune.name=Fire Rune
+
+item.water_essence.name=Water Essence
+item.water_rune.name=Water Rune

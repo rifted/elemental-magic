@@ -3,9 +3,13 @@ package com.gravirift.riftes.magica;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+
+import com.gravirift.riftes.magica.entities.RenderWaterOrb;
+import com.gravirift.riftes.magica.entities.WaterOrb;
+
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
@@ -32,6 +36,8 @@ public class MagicaMain
     	assetRegister.registerBlocksTerrain();
     	assetRegister.registerOtherItems();
     	assetRegister.registerRecipes();
+    	assetRegister.registerRenders();
+    	
     }
     
     @EventHandler
